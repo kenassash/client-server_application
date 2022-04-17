@@ -7,7 +7,6 @@
 from chardet import detect
 
 LS = ['сетевое программирование', 'сокет', 'декоратор']
-
 with open('test_file.txt', 'w') as file:
     for line in LS:
         file.write(f'{line}\n')
@@ -16,8 +15,8 @@ file.close()
 with open('test_file.txt', 'rb') as file:
     CONTENT = file.read()
 ENCODING = detect(CONTENT)['encoding']
-print('кодировка: ', ENCODING, end='\n\n')
-print('Текст:')
-with open('test.txt', 'r', encoding=ENCODING) as file:
+print(ENCODING)
+
+with open('test_file.txt', 'r', encoding=ENCODING) as file:
     CONTENT = file.read()
 print(CONTENT)

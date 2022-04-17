@@ -3,17 +3,18 @@
 преобразовать результаты из байтовового в строковый тип на кириллице.
 """
 
-from subprocess import Popen, PIPE
+import platform
+import subprocess
 from chardet import detect
 
-def ping(URL):
-    ARGS = ['ping', URL]
-    PING = Popen(ARGS, stdout=PIPE)
-    for line in PING.stdout:
-        result = detect(line)
-        line = line.decode(result['encoding']).encode('utf-8')
-        line = line.decode('utf-8')
-        print(result, line)
+urls = ['yandex.ru', 'youtube.com']
+code = '-n' if platform.system().lower() == 'windows' else '-c'
 
-ping('ya.ru')
-ping('youtube.com')
+for el in urls:
+    args = ['ping', code, '4', el]
+    YA_PING = subprocess.Popen(args, stdout=subprocess.PIPE)
+    for line in YA_PING.stdout:
+        result = detect(line)
+        print(result)
+        line = line.decode(result['encoding']).encode('utf-8')
+        print(line.decode('utf-8'))
