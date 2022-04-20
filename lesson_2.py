@@ -5,5 +5,15 @@
 содержимое и длину соответствующих переменных.
 """
 
-LS = [b'class', b'function', b'method']
-[print(el, type(el), len(el)) for el in LS]
+STR_A = 'class'
+STR_B = 'function'
+STR_C = 'method'
+
+STR_LIST = [STR_A, STR_B, STR_C]
+
+for el_str in STR_LIST:
+    el = eval(f"b'{el_str}'")
+    print('=' * 50)
+    print('type: ', type(el))
+    print(el)
+    print('length: ', len(el))
