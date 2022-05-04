@@ -5,20 +5,16 @@
 """
 Любое слово можно передать в байтовом виде. Хотя бы в виде попиксельной картинки.
 """
+VAR_1 = 'attribute'
+VAR_2 = 'класс'
+VAR_3 = 'функция'
+VAR_4 = 'type'
+
+WORDS = [VAR_1, VAR_2, VAR_3, VAR_4]
 
 
-def try_encoding(ls, code='utf-8'):
-    print(f'кодировка {code}')
-    for el in ls:
-        try:
-            bytes(el, code)
-            print(f'Слово "{el}" успешно перекодировано в кодировку {code}')
-        except UnicodeEncodeError:
-            print(f'Слово "{el}" невозможно записать в виде байтовой строки в кодировке {code}')
-    print()
-
-
-LS = ['attribute', 'класс', 'функция', 'type']
-
-print(try_encoding(LS))
-print(try_encoding(LS, code='ascii'))
+for item in WORDS:
+    try:
+        print(bytes(item, 'ascii'))
+    except UnicodeEncodeError:
+        print(f'Слово "{item}" невозможно записать в виде байтовой строки в кодировке ')
