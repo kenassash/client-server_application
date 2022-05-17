@@ -1,0 +1,4 @@
+2022-05-04 21:11:21,608 CRITICAL config_server_log.py Критическая ошибка
+2022-05-04 21:11:21,611 ERROR config_server_log.py Ошибка
+2022-05-04 21:11:21,612 DEBUG config_server_log.py Отладочная информация
+2022-05-04 21:11:21,612 INFO config_server_log.py Информационное сообщение
