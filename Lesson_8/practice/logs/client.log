@@ -1,0 +1,23 @@
+2022-05-23 21:12:02,850 DEBUG decos.py Была вызвана функция arg_parser c параметрами (), {}. Вызов из модуля __main__
+2022-05-23 21:12:12,602 INFO client.py Запущен клиент с параметрами: адрес сервера: 127.0.0.1, порт: 7777, имя пользователя: kenas
+2022-05-23 21:12:12,603 DEBUG client.py Сформировано presence сообщение для пользователя kenas
+2022-05-23 21:12:12,603 DEBUG decos.py Была вызвана функция create_presence c параметрами ('kenas',), {}. Вызов из модуля __main__
+2022-05-23 21:12:12,603 DEBUG decos.py Была вызвана функция send_message c параметрами (<socket.socket fd=420, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60334), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1653307932.603594, 'user': {'account_name': 'kenas'}}), {}. Вызов из модуля common.utils
+2022-05-23 21:12:12,604 DEBUG decos.py Была вызвана функция get_message c параметрами (<socket.socket fd=420, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60334), raddr=('127.0.0.1', 7777)>,), {}. Вызов из модуля common.utils
+2022-05-23 21:12:12,604 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2022-05-23 21:12:12,604 DEBUG decos.py Была вызвана функция process_response_ans c параметрами ({'response': 200},), {}. Вызов из модуля __main__
+2022-05-23 21:12:12,604 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2022-05-23 21:12:12,606 DEBUG client.py Запущены процессы
+2022-05-23 21:12:41,009 DEBUG client.py Сформирован словарь сообщения: {'action': 'message', 'from': 'kenas', 'to': 'привет', 'time': 1653307961.0098085, 'mess_text': 'пока'}
+2022-05-23 21:12:41,010 DEBUG decos.py Была вызвана функция send_message c параметрами (<socket.socket fd=420, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60334), raddr=('127.0.0.1', 7777)>, {'action': 'message', 'from': 'kenas', 'to': 'привет', 'time': 1653307961.0098085, 'mess_text': 'пока'}), {}. Вызов из модуля common.utils
+2022-05-23 21:12:41,010 INFO client.py Отправлено сообщение для пользователя привет
+2022-05-23 21:12:41,010 DEBUG decos.py Была вызвана функция create_message c параметрами (<socket.socket fd=420, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60334), raddr=('127.0.0.1', 7777)>, 'kenas'), {}. Вызов из модуля __main__
+2022-05-23 21:12:54,146 DEBUG client.py Сформирован словарь сообщения: {'action': 'message', 'from': 'kenas', 'to': 'привет', 'time': 1653307974.1469934, 'mess_text': 'пока'}
+2022-05-23 21:12:54,146 DEBUG decos.py Была вызвана функция send_message c параметрами (<socket.socket fd=420, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60334), raddr=('127.0.0.1', 7777)>, {'action': 'message', 'from': 'kenas', 'to': 'привет', 'time': 1653307974.1469934, 'mess_text': 'пока'}), {}. Вызов из модуля common.utils
+2022-05-23 21:12:54,146 INFO client.py Отправлено сообщение для пользователя привет
+2022-05-23 21:12:54,146 DEBUG decos.py Была вызвана функция create_message c параметрами (<socket.socket fd=420, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60334), raddr=('127.0.0.1', 7777)>, 'kenas'), {}. Вызов из модуля __main__
+2022-05-23 21:12:58,937 DEBUG decos.py Была вызвана функция create_exit_message c параметрами ('kenas',), {}. Вызов из модуля __main__
+2022-05-23 21:12:58,937 DEBUG decos.py Была вызвана функция send_message c параметрами (<socket.socket fd=420, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60334), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1653307978.9373314, 'account_name': 'kenas'}), {}. Вызов из модуля common.utils
+2022-05-23 21:12:58,937 INFO client.py Завершение работы по команде пользователя.
+2022-05-23 21:12:59,011 CRITICAL client.py Потеряно соединение с сервером.
+2022-05-23 21:12:59,011 DEBUG decos.py Была вызвана функция message_from_server c параметрами (<socket.socket fd=420, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60334), raddr=('127.0.0.1', 7777)>, 'kenas'), {}. Вызов из модуля __main__
